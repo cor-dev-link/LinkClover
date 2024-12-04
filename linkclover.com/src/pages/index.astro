@@ -1,0 +1,25 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+
+import  PricinComponent from '../components/pricing/PricingComponent.astro';
+import  ServiceComponent from '../components/service/ServiceComponent.astro';
+import HeroComponent from '../components/hero/HeroComponent.astro';
+import CtaComponent from '../components/cta/CtaComponent.astro';
+import { SERVICES_ROUTES } from "../const";
+import { PLANES_ROUTES } from "../const";
+import ClientesComponent from "../components/clients/ClientesComponent.astro";
+
+---
+<MainLayout title="Home">
+
+	<HeroComponent/>
+
+    <ServiceComponent name={SERVICES_ROUTES}/>
+
+    <CtaComponent/>
+
+    <PricinComponent plan={PLANES_ROUTES}/>
+
+    <ClientesComponent/>
+
+</MainLayout>

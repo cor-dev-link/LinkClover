@@ -1,0 +1,43 @@
+---
+import '../styles/main.css';
+import { ViewTransitions } from 'astro:transitions';
+import HeaderComponent from '../components/shared/HeaderComponent.astro';
+import FooterComponent from '../components/shared/FooterComponent.astro';
+
+
+interface Props {
+	title: string;
+	name?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{title}</title>
+	<ViewTransitions />
+</head>
+<body>
+    <header>
+           <HeaderComponent/>
+    </header>
+
+    <main>
+        <slot />
+    </main>
+
+    <footer>
+        <div class="container">
+            <FooterComponent/>
+        </div>
+    </footer>
+
+    <script src="../js/main.js">
+        
+    </script>
+</body>
+</html>

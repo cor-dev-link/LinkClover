@@ -1,0 +1,97 @@
+---
+interface Plan {
+    plan: string[];
+}
+
+
+const { plan } = Astro.props as Plan;
+---
+
+<section class="pricing">
+    <div class="container">
+        <h2>Planes de E-commerce</h2>
+        <div class="tabs">
+            <div class="tab active" data-tab="mensual">Mensual</div>
+            <div class="tab" data-tab="anual">Anual</div>
+        </div>
+        <div class="pricing-grid" id="mensual">
+            <div class="pricing-card">
+                <h3>Básico</h3>
+                <div class="price">COP 500.000 <span>/mes</span></div>
+                <ul class="features">
+                    <li>Tienda WordPress básica</li>
+                    <li>Hasta 100 productos</li>
+                    <li>Soporte por email</li>
+                    <li>Actualizaciones de seguridad</li>
+                </ul>
+                <a href={`/planes/${plan[0]}`} class="button button-primary"><span>Seleccionar Plan</span></a>
+            </div>
+            <div class="pricing-card">
+                <h3>Profesional</h3>
+                <div class="price">COP 1.200.000 <span>/mes</span></div>
+                <ul class="features">
+                    <li>Tienda WordPress avanzada</li>
+                    <li>Hasta 1000 productos</li>
+                    <li>Soporte prioritario</li>
+                    <li>SEO básico</li>
+                    <li>Integraciones personalizadas</li>
+                </ul>
+                <a href="#" class="button button-primary"><span>Seleccionar Plan</span></a>
+            </div>
+            <div class="pricing-card">
+                <h3>Empresarial</h3>
+                <div class="price">COP 3.000.000 <span>/mes</span></div>
+                <ul class="features">
+                    <li>Tienda WordPress a medida</li>
+                                                <li>Productos ilimitados</li>
+                    <li>Soporte 24/7</li>
+                    <li>SEO avanzado</li>
+                    <li>Desarrollo personalizado</li>
+                    <li>Análisis de datos</li>
+                </ul>
+                <a href="#" class="button button-primary"><span>Seleccionar Plan</span></a>
+            </div>
+        </div>
+        <div class="pricing-grid" id="anual" style="display: none;">
+            <div class="pricing-card">
+                <h3>Básico</h3>
+                <div class="price">COP 5.400.000 <span>/año</span></div>
+                <ul class="features">
+                    <li>Tienda WordPress básica</li>
+                    <li>Hasta 100 productos</li>
+                    <li>Soporte por email</li>
+                    <li>Actualizaciones de seguridad</li>
+                    <li>2 meses gratis</li>
+                </ul>
+                <a href="#" class="button button-primary"><span>Seleccionar Plan</span></a>
+            </div>
+            <div class="pricing-card">
+                <h3>Profesional</h3>
+                <div class="price">COP 12.960.000 <span>/año</span></div>
+                <ul class="features">
+                    <li>Tienda WordPress avanzada</li>
+                    <li>Hasta 1000 productos</li>
+                    <li>Soporte prioritario</li>
+                    <li>SEO básico</li>
+                    <li>Integraciones personalizadas</li>
+                    <li>2 meses gratis</li>
+                </ul>
+                <a href="#" class="button button-primary"><span>Seleccionar Plan</span></a>
+            </div>
+            <div class="pricing-card">
+                <h3>Empresarial</h3>
+                <div class="price">COP 32.400.000 <span>/año</span></div>
+                <ul class="features">
+                    <li>Tienda WordPress a medida</li>
+                    <li>Productos ilimitados</li>
+                    <li>Soporte 24/7</li>
+                    <li>SEO avanzado</li>
+                    <li>Desarrollo personalizado</li>
+                    <li>Análisis de datos</li>
+                    <li>2 meses gratis</li>
+                </ul>
+                <a href="#" class="button button-primary"><span>Seleccionar Plan</span></a>
+            </div>
+        </div>
+    </div>
+</section>

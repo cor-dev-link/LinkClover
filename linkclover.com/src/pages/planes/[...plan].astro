@@ -1,0 +1,51 @@
+---
+import type { GetStaticPaths } from "astro";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+export const getStaticPaths = (() => {
+    
+    return [
+        {
+           params: {
+               plan: "Basico"
+           }
+        },
+        {
+           params: {
+               plan: "Software a Medida"
+           }
+        },
+        {
+           params: {
+               plan: "Redes y Conectividad"
+           }
+        },
+        {
+           params: {
+               plan: "E-commerce WordPress"
+           }
+        },
+        {
+           params: {
+               plan: "Reparación de Equipos"
+           }
+        },
+        {
+            params: {
+                plan: "Consultoría Personalizada"
+            }
+        },
+        
+    ];
+}) satisfies GetStaticPaths;
+
+const { plan } = Astro.params;
+---
+
+<MainLayout title={plan}>
+    <h1>{plan}</h1>
+</MainLayout>
+
+
+---
+

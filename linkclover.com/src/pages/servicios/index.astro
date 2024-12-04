@@ -1,0 +1,13 @@
+---
+import ServiceComponent from "../../components/service/ServiceComponent.astro";
+import { SERVICES_ROUTES } from "../../const";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+
+
+const name = "Servicios"
+---
+
+<MainLayout title={name}>
+    <ServiceComponent name={SERVICES_ROUTES}/>
+</MainLayout>

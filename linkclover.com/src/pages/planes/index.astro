@@ -1,0 +1,11 @@
+---
+import PricingComponent from "../../components/pricing/PricingComponent.astro";
+import { PLANES_ROUTES } from "../../const";
+import MainLayout from "../../layouts/MainLayout.astro";
+
+
+---
+
+<MainLayout title="Planes">
+    <PricingComponent plan={PLANES_ROUTES}/>
+</MainLayout>
