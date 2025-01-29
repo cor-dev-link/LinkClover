@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 prices.forEach((price, i) => {
                     price.textContent = annualPrices[i];
                 });
-            }empresas/Contrato
+            }
         });
     });
 
@@ -123,16 +123,13 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         carouselInner.style.transform = `translateX(${position}px)`;
     }
-    empresas/Contrato
+
     prevButton.addEventListener('click', () => moveCarousel('prev'));
     nextButton.addEventListener('click', () => moveCarousel('next'));
 
-    // Service card click handler
-    
-
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventLiempresas/Contratostener('click', function (e) {
+        anchor.addEventListener('click', function (e) {
             e.preventDefault();
 
             document.querySelector(this.getAttribute('href')).scrollIntoView({

@@ -2,8 +2,7 @@
 import type { GetStaticPaths } from "astro";
 import MainLayout from "../../layouts/MainLayout.astro";
 
-export const getStaticPaths = (() => {
-    
+export const getStaticPaths: GetStaticPaths = async () => {
     return [
         {
            params: {
@@ -35,17 +34,35 @@ export const getStaticPaths = (() => {
                 plan: "Consultoría Personalizada"
             }
         },
-        
     ];
-}) satisfies GetStaticPaths;
+};
 
 const { plan } = Astro.params;
+const planTitle = typeof plan === 'string' ? plan : '';
 ---
-
-<MainLayout title={plan}>
+<MainLayout title={planTitle}>
     <h1>{plan}</h1>
+    {plan === "Basico" && (
+    <p>Este es el plan básico, ideal para pequeñas empresas y emprendedores que necesitan una presencia en línea.</p>
+)}
+
+{plan === "Software a Medida" && (
+    <p>Ofrecemos desarrollo de software a medida para satisfacer las necesidades específicas de tu negocio.</p>
+)}
+
+{plan === "Redes y Conectividad" && (
+    <p>Soluciones de redes y conectividad para asegurar que tu empresa esté siempre en línea y funcionando sin problemas.</p>
+)}
+
+{plan === "E-commerce WordPress" && (
+    <p>Desarrollamos tiendas en línea utilizando WordPress, la plataforma más popular y flexible del mercado.</p>
+)}
+
+{plan === "Reparación de Equipos" && (
+    <p>Servicio de reparación de equipos para mantener tu hardware en perfecto estado y funcionando eficientemente.</p>
+)}
+
+{plan === "Consultoría Personalizada" && (
+    <p>Consultoría personalizada para ayudarte a tomar las mejores decisiones tecnológicas para tu negocio.</p>
+)}
 </MainLayout>
-
-
----
-

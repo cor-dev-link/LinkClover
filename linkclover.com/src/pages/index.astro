@@ -8,6 +8,7 @@ import CtaComponent from '../components/cta/CtaComponent.astro';
 import { SERVICES_ROUTES } from "../const";
 import { PLANES_ROUTES } from "../const";
 import ClientesComponent from "../components/clients/ClientesComponent.astro";
+import ConocerMas from "../components/conocer_mas/conocerMas.astro";
 
 ---
 <MainLayout title="Home">
@@ -15,7 +16,9 @@ import ClientesComponent from "../components/clients/ClientesComponent.astro";
 	<HeroComponent/>
 
     <ServiceComponent name={SERVICES_ROUTES}/>
-
+    
+    <ConocerMas/>
+    
     <CtaComponent/>
 
     <PricinComponent plan={PLANES_ROUTES}/>

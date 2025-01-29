@@ -40,9 +40,13 @@ export const getStaticPaths = (() => {
 }) satisfies GetStaticPaths;
 
 const { servicio } = Astro.params;
+
+if (servicio === "Soporte Microsoft 365") {
+    
+}
 ---
 
 <MainLayout title={servicio}>
-    <h1>{servicio}</h1>
+    
 </MainLayout>
 

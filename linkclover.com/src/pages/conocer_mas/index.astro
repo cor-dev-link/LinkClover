@@ -1,0 +1,18 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import ServiceComponent from "../../components/service/ServiceComponent.astro";
+import ConocerMas from "../../components/conocer_mas/conocerMas.astro";
+import { SERVICES_ROUTES } from "../../const";
+import PorqueLinkClover from "../../components/conocer_mas/template/PorqueLinkClover.astro";
+
+
+---
+<MainLayout title="Conocer_Mas">
+    <ConocerMas />
+   
+    <ServiceComponent name={SERVICES_ROUTES}/>
+
+    <PorqueLinkClover />
+
+
+</MainLayout>
